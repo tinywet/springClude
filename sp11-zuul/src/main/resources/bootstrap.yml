@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    inetutils:
+      ignored-interfaces:
+      - VM.*
+#      preferred-networks:#      - 172.242
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      name: zuul
+      profile: dev
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
